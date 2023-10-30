@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/styles/main.css}">
+    <title>Home</title>
+  </head>
+  <body>
+    <ul>
+      <li th:each="reservation: ${reservations}">
+        <ul>
+          <li th:text="${reservation.reservationDateTime}"></li>
+          <li th:text="${reservation.usageTime}"></li>
+          <li th:text="${reservation.responsibleName}"></li>
+          <li th:text="${reservation.status}"></li>
+          <li th:text="${reservation.shift}"></li>
+          <li th:text="${reservation.cost}"></li>
+          <li>
+            <a th:href="@{/edit/{id} (id = ${reservation.id})}">Editar</a>
+          </li>
+          <li>
+            <a th:href="@{/delete/{id} (id = ${reservation.id})}">Eliminar</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

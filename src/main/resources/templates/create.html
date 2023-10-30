@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/styles/main.css}" />
+    <title>Home</title>
+  </head>
+  <body>
+    <form th:action="@{/create}" method="POST">
+      <input
+        type="text"
+        name="responsibleName"
+        id="responsibleName"
+        required
+        autocomplete="off"
+        placeholder="responsibleName"
+      />
+      <input
+        type="text"
+        name="shift"
+        id="shift"
+        required
+        autocomplete="off"
+        placeholder="shift"
+      />
+      <input
+        type="text"
+        name="status"
+        id="status"
+        required
+        autocomplete="off"
+        placeholder="status"
+      />
+      <input
+        type="text"
+        name="usageTime"
+        id="usageTime"
+        required
+        autocomplete="off"
+        placeholder="usageTime"
+      />
+      <input type="number" name="cost" id="cost" required placeholder="cost" />
+
+      <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
+  </body>
+</html>
