@@ -8,7 +8,7 @@
   </head>
   <body>
     <form th:action="@{/create}" method="POST">
-      <input type="hidden"  name="id" th:value="${reservation.id}" />
+        <input type="hidden" name="id" th:value="${reservation.id}">
       <input
         type="text"
         name="responsibleName"
@@ -16,7 +16,7 @@
         required
         autocomplete="off"
         placeholder="responsibleName"
-        th:text="${reservation.responsibleName}"
+        th:value="${reservation.responsibleName}"
       />
       <input
         type="text"
@@ -25,7 +25,7 @@
         required
         autocomplete="off"
         placeholder="shift"
-        th:text="${reservation.shift}"
+        th:value="${reservation.shift}"
       />
       <input
         type="text"
@@ -34,7 +34,7 @@
         required
         autocomplete="off"
         placeholder="status"
-        th:text="${reservation.status}"
+        th:value="${reservation.status}"
       />
       <input
         type="text"
@@ -43,7 +43,7 @@
         required
         autocomplete="off"
         placeholder="usageTime"
-        th:text="${reservation.usageTime}"
+        th:value="${reservation.usageTime}"
       />
       <input
         type="number"

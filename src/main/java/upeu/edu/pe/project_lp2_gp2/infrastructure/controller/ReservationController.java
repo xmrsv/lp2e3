@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package upeu.edu.pe.project_lp2_gp2.infrastructure.controller;
 
 import java.time.LocalDateTime;
@@ -51,7 +47,7 @@ public class ReservationController {
     public String editProduct(@PathVariable Integer id, Model model) {
         ReservationEntity reservationEntity = reservationService.getReservationById(id);
         logger.info("Reserva obtenida {}", reservationEntity.toString());
-        model.addAttribute("reservations", reservationEntity);
+        model.addAttribute("reservation", reservationEntity);
         return "edit";
     }
 

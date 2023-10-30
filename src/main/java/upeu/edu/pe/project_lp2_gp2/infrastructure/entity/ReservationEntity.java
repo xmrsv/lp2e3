@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package upeu.edu.pe.project_lp2_gp2.infrastructure.entity;
 
 import java.time.LocalDateTime;
@@ -14,7 +10,7 @@ import jakarta.persistence.Id;
 @Entity
 public class ReservationEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private LocalDateTime reservationDateTime;
     private String usageTime;
